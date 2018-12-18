@@ -1,0 +1,46 @@
+caption{/*el caption es para ponerle un titulo a la tabla supongo que con dom las haras aparecer asi que pondras el titulo de cada una*/
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+caption>input{/*supongo que pondras inputs asi que esto te puede ayudar ,los inputs dentro del caption*/
+    font-size: 110%;
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+tr>td>input{/*los inputs dentro de los td*/
+    font-size: 85%;
+    text-align: center;
+    border: 0;
+    width: 100%;
+}
+tr>th+th{/*dentro de un tr y al lado de un th es para hacer al segundo th el borde de la izquierda*/
+    border-left:1px solid black;
+}
+tr>th{/*dentro de un tr los th */
+    border-bottom:1px solid black;
+}
+tr>td+td{/*dentro de un tr y al lado de un td,es para hacer al segundo td el borde de la izquierda */
+    border-left:1px solid black;
+}
+table{
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    width: 20%;
+    font-size:200%;
+    float: left;
+    margin-left: 1%;
+}
+.elemento {
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    float: left;
+    position: relative;
+    width: 200px;
+    /*border: steelblue solid 1px;*/
+    height: auto;
+}
