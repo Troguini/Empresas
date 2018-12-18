@@ -3,6 +3,7 @@ window.onload = function () {
     var bAnadir = document.getElementById("anadir");
 
     //aqui empiezo a crear el dom.
+    //aqui soy un master
 
     bAnadir.onclick = function(){
         var debe = document.getElementById("debe").value;
