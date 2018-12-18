@@ -2,6 +2,8 @@ window.onload = function () {
     var cuentas = document.getElementById("cuentas");
     var bAnadir = document.getElementById("anadir");
 
+    //aqui empiezo a crear el dom.
+
     bAnadir.onclick = function(){
         var debe = document.getElementById("debe").value;
         var haber = document.getElementById("haber").value;
