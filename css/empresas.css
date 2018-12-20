@@ -3,6 +3,9 @@ caption{/*el caption es para ponerle un titulo a la tabla supongo que con dom la
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+input{
+    width: 200px;
+}
 caption>input{/*supongo que pondras inputs asi que esto te puede ayudar ,los inputs dentro del caption*/
     font-size: 110%;
     border: 0;
@@ -36,12 +39,13 @@ table{
 .elemento {
     padding-left: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 10px;
     margin-left: 10px;
     float: left;
     position: relative;
     width: 200px;
-    /*border: steelblue solid 1px;*/
+    border: steelblue solid 1px;
     height: auto;
 }
 #diario{

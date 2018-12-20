@@ -7,14 +7,30 @@
     <script src="js/empresas.js"></script>
 </head>
 <body>
+<h1>Añadir Cuentas</h1>
 <form>
     <label for="cuenta">Nombre Cuenta: </label>
-    <input type="text" name="cuenta" id="cuenta" style="width: 200px">
+    <input type="text" name="cuenta" id="cuenta">
     Cantidad Debe:
-    <input type="text" name="debe" id="debe" style="width: 200px">
+    <input type="text" name="debe" id="debe">
     Cantidad Haber:
-    <input type="text" name="haber" id="haber" style="width: 200px">
+    <input type="text" name="haber" id="haber">
     <button type="button" id="anadir">Añadir</button>
+</form>
+<hr>
+<h1>Diario</h1>
+<form>
+    <label for="dia">Dia:</label>
+    <input type="text" name="dia" id="dia"><br>
+    <label for="cuentaD">Cuenta Debe:</label>
+    <input type="text" name="cuentaD" id="cuentaD">
+    <label for="cantidadD">Cantidad Debe:</label>
+    <input type="text" name="cantidadD" id="cantidadD"><br>
+    <label for="cuentaH">Cuenta Haber:</label>
+    <input type="text" name="cuentaH" id="cuentaH">
+    <label for="cantidadH">Cantidad Haber:</label>
+    <input type="text" name="cantidadH" id="cantidadH"><br>
+    <button type="button" id="btnDiario">Añadir</button>
 </form>
 <div id="cuentas"></div>
 <div id="diario"></div>

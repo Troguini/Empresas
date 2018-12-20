@@ -116,7 +116,7 @@ window.onload = function () {
         //llamar la funcion
 
         crearCuenta(nombreValor,debeValor,haberValor);
-        crearDiario(nombreValor,debeValor,haberValor);
+        //crearDiario(nombreValor,debeValor,haberValor);
 
         //vaciar los inputs
         nombre.value = "";
