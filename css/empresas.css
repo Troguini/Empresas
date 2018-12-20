@@ -44,3 +44,10 @@ table{
     /*border: steelblue solid 1px;*/
     height: auto;
 }
+#diario{
+    width: 50%;
+}
+#cuentas{
+    width: 50%;
+    float: right;
+}

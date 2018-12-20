@@ -77,8 +77,21 @@ function crearCuenta(nombre,debe,haber){
     cuentas.appendChild(div);
 }
 
+function crearDiario(nombre,debe,haber){
+    var div = document.createElement("div");
+    div.setAttribute("class","elemento");
+
+    var p = document.createElement("p");
+    var txtP = document.createTextNode(nombre);
+    p.appendChild(txtP);
+    div.appendChild(p);
+
+    diario.appendChild(div);
+}
+
 window.onload = function () {
     var cuentas = document.getElementById("cuentas");
+    var diario = document.getElementById("diario");
     var bAnadir = document.getElementById("anadir");
 
     //aqui empiezo a crear el dom.
@@ -93,6 +106,7 @@ window.onload = function () {
         //llamar la funcion
 
         crearCuenta(nombre,debe,haber);
+        crearDiario(nombre,debe,haber);
 
         // var div = document.createElement("div");
         // div.setAttribute("class","elemento");
