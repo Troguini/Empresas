@@ -42,8 +42,12 @@ function crearCuenta(nombre,debe,haber){
         tdAH.appendChild(txttdAH);
         trA.appendChild(tdAH);
         table.appendChild(trA);
+        inputD.value = "";
+        inputH.value = "";
     }
     div.appendChild(boton);
+
+
 
     //creacion de la tabla
     var table = document.createElement("table");
@@ -86,7 +90,7 @@ function crearDiario(nombre,debe,haber){
     div.setAttribute("class","elemento");
 
     var p = document.createElement("p");
-    var txtP = document.createTextNode(nombre);
+    var txtP = document.createTextNode("Dia X " + debe + "de " + nombre);
     p.appendChild(txtP);
     div.appendChild(p);
 
@@ -100,15 +104,26 @@ window.onload = function () {
     //aqui soy un master
 
     bAnadir.onclick = function(){
-        var debe = document.getElementById("debe").value;
-        var haber = document.getElementById("haber").value;
-        var nombre = document.getElementById("cuenta").value;
+        var debe = document.getElementById("debe");
+        var haber = document.getElementById("haber");
+        var nombre = document.getElementById("cuenta");
+
+        var nombreValor = nombre.value;
+        var debeValor = debe.value;
+        var haberValor = haber.value;
 
 
         //llamar la funcion
 
-        crearCuenta(nombre,debe,haber);
-        crearDiario(nombre,debe,haber);
+        crearCuenta(nombreValor,debeValor,haberValor);
+        crearDiario(nombreValor,debeValor,haberValor);
+
+        //vaciar los inputs
+        nombre.value = "";
+        debe.value = "";
+        haber.value = "";
+
+
 
         // var div = document.createElement("div");
         // div.setAttribute("class","elemento");
