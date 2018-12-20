@@ -1,4 +1,5 @@
 function crearCuenta(nombre,debe,haber){
+    var cuentas = document.getElementById("cuentas");
     //creacion del div
     var div = document.createElement("div");
     div.setAttribute("class","elemento");
@@ -78,6 +79,9 @@ function crearCuenta(nombre,debe,haber){
 }
 
 function crearDiario(nombre,debe,haber){
+    var diario = document.getElementById("diario");
+
+    //creacion div
     var div = document.createElement("div");
     div.setAttribute("class","elemento");
 
@@ -90,8 +94,6 @@ function crearDiario(nombre,debe,haber){
 }
 
 window.onload = function () {
-    var cuentas = document.getElementById("cuentas");
-    var diario = document.getElementById("diario");
     var bAnadir = document.getElementById("anadir");
 
     //aqui empiezo a crear el dom.
