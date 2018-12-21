@@ -82,23 +82,32 @@ function crearCuenta(nombre,debe,haber){
     cuentas.appendChild(div);
 }
 
-function crearDiario(nombre,debe,haber){
+function crearDiario(dia,cuentaD,cantidadD,cuentaH,cantidadH){
     var diario = document.getElementById("diario");
 
-    //creacion div
+    //creacion de un div
     var div = document.createElement("div");
     div.setAttribute("class","elemento");
 
+    //Creacion del interior
+    var pDia = document.createElement("p");
+    var txtPDia = document.createTextNode("Día " + dia.value);
+    pDia.appendChild(txtPDia);
+    div.appendChild(pDia);
     var p = document.createElement("p");
-    var txtP = document.createTextNode("Dia X " + debe + "de " + nombre);
+    var txtP = document.createTextNode(cantidadD.value + " " + cuentaD.value + " a " + cuentaH.value + " " + cantidadH.value);
     p.appendChild(txtP);
     div.appendChild(p);
 
+    //añadir la creacion al div general
     diario.appendChild(div);
+
+
 }
 
 window.onload = function () {
     var bAnadir = document.getElementById("anadir");
+    var btnDiario = document.getElementById("btnDiario");
 
     //aqui empiezo a crear el dom.
     //aqui soy un master
@@ -116,13 +125,21 @@ window.onload = function () {
         //llamar la funcion
 
         crearCuenta(nombreValor,debeValor,haberValor);
-        //crearDiario(nombreValor,debeValor,haberValor);
 
         //vaciar los inputs
         nombre.value = "";
         debe.value = "";
         haber.value = "";
 
+    }
+    btnDiario.onclick = function () {
+        var dia = document.getElementById("dia");
+        var cuentaD = document.getElementById("cuentaD");
+        var cantidadD = document.getElementById("cantidadD");
+        var cuentaH = document.getElementById("cuentaH");
+        var cantidadH = document.getElementById("cantidadH");
+
+        crearDiario(dia,cuentaD,cantidadD,cuentaH,cantidadH);
     }
 
 }
