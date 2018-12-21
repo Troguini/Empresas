@@ -4,7 +4,7 @@ caption{/*el caption es para ponerle un titulo a la tabla supongo que con dom la
     border-right: 1px solid black;
 }
 input{
-    width: 200px;
+    width: 120px;
 }
 caption>input{/*supongo que pondras inputs asi que esto te puede ayudar ,los inputs dentro del caption*/
     font-size: 110%;

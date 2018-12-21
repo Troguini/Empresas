@@ -89,11 +89,25 @@ function crearDiario(dia,cuentaD,cantidadD,cuentaH,cantidadH){
     var div = document.createElement("div");
     div.setAttribute("class","elemento");
 
+    //creacion de modificadores de datos
+    var labelCuentaD = document.createElement("label");
+    labelCuentaD.setAttribute("for","inputCuentaD");
+    var txtLabelCuentaD = document.createTextNode("Cuenta Debe");
+    labelCuentaD.appendChild(txtLabelCuentaD);
+    div.appendChild(labelCuentaD);
+    var inputCuentaD = document.createElement("input");
+    inputCuentaD.setAttribute("type","text");
+    inputCuentaD.setAttribute("id","inputCuentaD");
+    div.appendChild(inputCuentaD);
+
+
     //Creacion del interior
     var pDia = document.createElement("p");
     var txtPDia = document.createTextNode("Día " + dia.value);
     pDia.appendChild(txtPDia);
     div.appendChild(pDia);
+
+    //creacion de contenido con los datos
     var p = document.createElement("p");
     var txtP = document.createTextNode(cantidadD.value + " " + cuentaD.value + " a " + cuentaH.value + " " + cantidadH.value);
     p.appendChild(txtP);
