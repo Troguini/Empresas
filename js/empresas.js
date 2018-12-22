@@ -92,14 +92,90 @@ function crearDiario(dia,cuentaD,cantidadD,cuentaH,cantidadH){
     //creacion de modificadores de datos
     var labelCuentaD = document.createElement("label");
     labelCuentaD.setAttribute("for","inputCuentaD");
-    var txtLabelCuentaD = document.createTextNode("Cuenta Debe");
+    var txtLabelCuentaD = document.createTextNode("Cuenta Debe:");
     labelCuentaD.appendChild(txtLabelCuentaD);
     div.appendChild(labelCuentaD);
+
+    var br1 = document.createElement("br");
+    div.appendChild(br1);
+
     var inputCuentaD = document.createElement("input");
     inputCuentaD.setAttribute("type","text");
     inputCuentaD.setAttribute("id","inputCuentaD");
     div.appendChild(inputCuentaD);
 
+    var br2 = document.createElement("br");
+    div.appendChild(br2);
+
+    var labelCantidadD = document.createElement("label");
+    labelCantidadD.setAttribute("for","inputCantidadD");
+    var txtLabelCantidadD = document.createTextNode("Cantidad Debe:");
+    labelCantidadD.appendChild(txtLabelCantidadD);
+    div.appendChild(labelCantidadD);
+
+    var br3 = document.createElement("br");
+    div.appendChild(br3);
+
+    var inputCantidadD = document.createElement("input");
+    inputCantidadD.setAttribute("type","text");
+    inputCantidadD.setAttribute("id","inputCantidadD");
+    div.appendChild(inputCantidadD);
+
+    var br4 = document.createElement("br");
+    div.appendChild(br4);
+
+    var labelCuentaH = document.createElement("label");
+    labelCuentaH.setAttribute("for","inputCuentaH");
+    var txtLabelCuentaH = document.createTextNode("Cuenta Haber:");
+    labelCuentaH.appendChild(txtLabelCuentaH);
+    div.appendChild(labelCuentaH);
+
+    var br5 = document.createElement("br");
+    div.appendChild(br5);
+
+    var inputCuentaH = document.createElement("input");
+    inputCuentaH.setAttribute("type","text");
+    inputCuentaH.setAttribute("id","inputCuentaH");
+    div.appendChild(inputCuentaH);
+
+    var br6 = document.createElement("br");
+    div.appendChild(br6);
+
+    var labelCantidadH = document.createElement("label");
+    labelCantidadH.setAttribute("for","inputCantidadH");
+    var txtLabelCantidadH = document.createTextNode("Cantidad Haber:");
+    labelCantidadH.appendChild(txtLabelCantidadH);
+    div.appendChild(labelCantidadH);
+
+    var br7 = document.createElement("br");
+    div.appendChild(br7);
+
+    var inputCantidadH = document.createElement("input");
+    inputCantidadH.setAttribute("type","text");
+    inputCantidadH.setAttribute("id","inputCantidadH");
+    div.appendChild(inputCantidadH);
+
+    var br8 = document.createElement("br");
+    div.appendChild(br8);
+
+    var btn = document.createElement("button");
+    btn.setAttribute("type","button");
+    btn.setAttribute("id","anadir");
+    var txtBtn = document.createTextNode("Añadir");
+    btn.appendChild(txtBtn);
+    btn.onclick = function(){
+        //obtener valores del input cuentaD->inputCuentaD,cantidadD->inputCantidadD,cuentaH->inputCuentaH y cantidadH->inputCantidadH
+        var p = document.createElement("p");
+        var txtP = document.createTextNode(inputCantidadD.value + " " + inputCuentaD.value + " a " + inputCuentaH.value + " " + inputCantidadH.value);
+        p.appendChild(txtP);
+
+        div.appendChild(p);
+    }
+    div.appendChild(btn);
+
+    //creacion de hr
+    var hr = document.createElement("hr");
+    div.appendChild(hr);
 
     //Creacion del interior
     var pDia = document.createElement("p");
