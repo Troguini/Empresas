@@ -170,6 +170,12 @@ function crearDiario(dia,cuentaD,cantidadD,cuentaH,cantidadH){
         p.appendChild(txtP);
 
         div.appendChild(p);
+
+        //vaciar inputs
+        inputCantidadD.value = "";
+        inputCuentaD.value = "";
+        inputCantidadH.value = "";
+        inputCuentaH.value = "";
     }
     div.appendChild(btn);
 
